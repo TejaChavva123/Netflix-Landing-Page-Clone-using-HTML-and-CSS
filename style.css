@@ -1,0 +1,268 @@
+*{
+    margin:0;
+    padding:0;
+    box-sizing:border-box;
+    font-family:'Poppins',sans-serif;
+    box-sizing:border-box;
+}
+
+body{
+    background-color: #00081d;
+    color: #fff;
+}
+
+.header{
+    margin:30px;
+    width:95%;
+    height:100vh;
+    background-image: linear-gradient(rgba(0,0,0,0.7),rgba(50,0,0,0.7)),url(images/header-image.png);
+    border-radius:20px;
+    background-size:cover;
+    background-position:center;
+    padding:10px 8%;
+    position:relative;
+}
+
+nav{
+    display:flex;
+    align-items:center;
+    justify-content: space-between;
+    padding:10px 0;
+    margin:10px 30px;
+}
+
+.logo{
+    width:150px;
+    cursor:pointer;
+    margin-top:10px;
+}
+
+nav button{
+    border:0;
+    outline:0;
+    background:#db0001;
+    color:#fff;
+    padding:7px 20px;
+    font-size:14px;
+    border-radius:4px;
+    margin-left:15px;
+    cursor:pointer;
+    font-weight: bold;
+}
+
+.language-button{
+    display:inline-flex;
+    align-items:center;
+    background:transparent;
+    border:1px solid #fff;
+    padding:7px 10px;
+    color:#fff;
+}
+.language-button img{
+    width:10px;
+    margin-left:10px;   
+}
+.header-content{
+    position:absolute;
+    top:26%;
+    left:45%;
+    transform:translate(-40%,-40%);
+    align-items:center;
+    text-align:center;
+    margin-top: 100px; 
+}
+
+.header-content h1{
+    font-size:60px;
+    line-height: 70px;
+    font-weight: 600;
+    max-width:600px;
+    color: rgba(255, 255, 255, 1);
+}
+
+.header-content h3{
+    font-weight:400;
+    margin-bottom:20px;
+
+}
+
+.email-signup{
+    background:#fff;
+    border-radius:4px;
+    display:flex;
+    align-items:center;
+    margin-top:20px;
+    overflow:hidden;
+}
+
+.email-signup input{
+    flex: 1;
+    border:0;
+    outline:0;
+    margin-left:20px;
+}
+.email-signup button{
+    background:#db0001;
+    border:0;
+    outline:0;
+    color:#fff;
+    font-size:20px;
+    cursor:pointer;
+    padding:15px 30px;
+}
+
+/* ------------features */
+.features{
+    padding:50px 12%;
+    font-size:22px;
+}
+.row{
+    display:flex;
+    width:100%;
+    align-items:center;
+    flex-wrap:wrap;
+    padding:10px 0;
+    border-bottom:7px solid #2c233b;
+}
+.text-col{
+    flex-basis:50%;
+    margin-bottom:5%;
+}
+.text-col h2{
+    margin-bottom:20px;
+    font-size:50px;
+    font-weight:600;
+}
+.img-col{
+    flex-basis:50%;
+    margin-bottom:5%;
+}
+
+.img-col img{
+    display:block;
+    width:100%;
+    margin:auto;
+}
+
+.faq{
+    padding:10px 8%;
+    /* text-align:center; */
+    font-size:20px;
+}
+
+.faq h2{
+    margin-left:15%;
+    font-weight:600;
+    font-size:40px;
+}
+
+.accordion{
+    margin:60px auto;
+    width:100%;
+    max-width:750px;
+}
+.accordion li{
+    list-style: none;
+    width:100%;
+    padding:5px;
+    /* margin:30px; */
+}
+.accordion li label{
+    display:flex;
+    align-items:center;
+    padding:20px;
+    font-size:18px;
+    font-weight:500;
+    background:#132144;
+    margin-bottom: 2px;
+    cursor:pointer;
+    position:relative;
+}
+label::after{
+    content: '+';
+    font-size:34px;
+    position:absolute;
+    right:20px;
+    transition: transform 0.5s;
+}
+
+input[type="radio"]{
+    display:none;
+}
+
+.accordion .content{
+    background:#132144;
+    text-align:left;
+    padding:0px 20px;
+    max-height:0;
+    overflow:hidden;
+    transition:max-height 0.5s, padding 0.5s;
+}
+
+.accordion input[type="radio"]:checked+label+.content{
+    max-height:600px;
+    padding:30px 20px;
+}
+.accordion input[type="radio"]:checked + label::after{
+    transform: rotate(135deg);
+}
+.faq h3{
+    font-size:20px;
+    text-align: center;
+    margin:10px auto;
+}
+.faq .email-signup{
+    max-width: 600px;
+    margin:auto;
+}
+
+.footer{
+    padding:50px 15% 10px;
+    color:#fff;
+}
+.footer h2{
+    border-top:5px solid #2c233b;
+    padding:20px;
+    font-weight:400;
+}
+.footer .col{
+    flex-basis:25%;
+    flex-grow:1;
+    /* margin-bottom:40px; */
+}
+.footer .row{
+    border:none;
+    align-items:flex-start;
+}
+.footer .col a{
+    display:block;
+    text-decoration:none;
+    font-size:15px;
+    margin-bottom: 10px;
+    color:#fff;
+}
+
+.copy-right{
+    margin-top:30px;
+    margin-bottom:200px;
+}
+
+@media only screen and (max-width:750px){
+    .email-signup{
+        max-width:500px;
+        max-height:60px;
+    }
+    .header{
+        width:90%;
+    }
+    .text-col,.img-col{
+        flex-basis: 100%;
+    }
+    .row:nth-child(2),.row:nth-child(4){
+        flex-direction: column-reverse;
+    }
+    .footer .col{
+        flex-basis:100%;
+    }
+
+}
